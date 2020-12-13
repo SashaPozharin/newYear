@@ -1,0 +1,61 @@
+body{
+    background-color: rgb(24, 21, 21);
+}
+
+#snow{
+    background-image: url("img/snow_1.png"),url("img/snow_2.png"),url("img/snow_3.png");
+
+    z-index: 1;
+
+    animation: snow 15s linear infinite;
+
+
+}
+
+@keyframes snow{
+    0%{
+        background-position: 0px 0px, 0px 0px, 0px 0px ;
+    }
+
+
+
+
+    100%{
+        background-position: 500px 750px, 150px 1500px, -175px 150px ;
+    }
+}
+
+#player{
+    position: fixed;
+    left: 85%;
+    width: 80px;
+    background-image: url("img/tree_toy.png");
+    background-size: contain;
+    height: 158px;
+}
+#player>img{
+    position: relative;
+    width: 35px;
+    left: 20;
+    top: 100px;
+
+    filter: invert(9%) sepia(100%) saturate(7490%) hue-rotate(253deg) brightness(88%) contrast(137%);
+}
+
+@font-face {
+    font-family: 'Mountains of Christmas';
+    font-style: normal;
+    src: local("Mountains of Christmas"), local("MountainsofChristmas-Regular"), url(https://fonts.gstatic.com/s/mountainsofchristmas/v8/dVGBFPwd6G44IWDbQtPewylJhLDHyIrT3I5b5eGTHmw.woff2) format("woff2");
+  }
+  
+#graz{
+    position: absolute;
+    left: 18%;
+    top: 35%;
+    color: snow;
+    font-family: 'Mountains of Christmas';
+      
+}
+#graz>h1{
+    font-size: 138pt;
+}
