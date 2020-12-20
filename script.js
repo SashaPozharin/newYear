@@ -1,30 +1,24 @@
 let music;
-
-$(document).ready(function (){
+// Сайт загрузился
+$(document).ready(function () {
+    // Настраиваем музыку
     music = new Howl({
-        src:["audio/muzon1.mp3","audio/muzon2.mp3","audio/muzon3.mp3"],
+        src: ["audio/muzon1.mp3", "audio/muzon2.mp3", "audio/muzon3.mp3"],
         loop: true,
-        volume: 0.45
+        volume: 0.5
     });
-
 });
-
-$("#tree>img").click(function (e) { 
-    music.stop
+// Если нажали на ноту, играет музыка
+$("#tree>img").click(function(e){ 
+    music.stop();
     let name = e.target.id;
     if(name == "toy1"){
-       //music.fade(0.45,0,1000, music)
-       //music.stop()
         music.play(1);
-}
+    }
     else if(name == "toy2"){
-       //music.fade(0.45,0,1000, music)
-       //music.stop()
         music.play(2);
     }
     else if(name == "toy3"){
-        //music.fade(0.45,0,1000, music)
-        //music.stop()
         music.play(3);
     }
 });
