@@ -25,21 +25,46 @@ body{
     }
 }
 
-#player{
+#tree{
+    top: 44%;
     position: fixed;
-    left: 85%;
-    width: 80px;
-    background-image: url("img/tree_toy.png");
+    width: 376px;
+    background-image: url("img/tree.png");
     background-size: contain;
-    height: 158px;
+    height: 600px;
 }
-#player>img{
+#toy1{
     position: relative;
-    width: 35px;
-    left: 20;
-    top: 100px;
+    width:  61px;
 
-    filter: invert(9%) sepia(100%) saturate(7490%) hue-rotate(253deg) brightness(88%) contrast(137%);
+    left: 102px;
+    top: 250px;
+}
+#toy2{
+    position: relative;
+    width:  65px;
+    left: 125px;
+    top: 360px;
+}
+#toy3{
+    position: relative;
+    width:  54px;
+    left: 35px;
+    top: 120px;
+}
+#countdown{
+    position: absolute;
+    left: 21%;
+    top: 62%;
+    color: azure;
+    font-family: 'Russo One', sans-serif;
+}
+#countdown>p{
+    font-size: 48pt;
+}
+#countdown>span{
+    font-size:58pt ;
+    
 }
 
 @font-face {
