@@ -176,8 +176,8 @@
 }
 .snowmanMobile{
     position: absolute;
-    left:77px;
-    bottom: 71%;
+    left:-20%;
+    bottom: 57%;
     transform: scale(0.5);
 }
 /*===================================*/

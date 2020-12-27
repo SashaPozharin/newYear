@@ -61,13 +61,13 @@ body{
 /* для мобилы*/
 #countdownMobile{
     position: absolute;
-    left: 22%;
+    left: 19%;
     top: 43%;
     color: azure;
     font-family: 'Russo One', sans-serif;
 }
 #countdownMobile>span{
-    font-size:28pt ;
+    font-size:22pt ;
     
 }
 
@@ -79,12 +79,12 @@ body{
   
 #grazMobile{
     position: absolute;
-    left: 23%;
+    left: 22%;
     top: 35%;
     color: snow;
     font-family: 'Mountains of Christmas';
       
 }
 #grazMobile>h1{
-    font-size: 28pt;
+    font-size: 22pt;
 }

@@ -9,11 +9,11 @@
     height: 600px;
 }
 #treeMobile{
-    transform: scale(0.5);
-    top: 53%;
+    transform: scale(0.4);
+    top: 36%;
     position: fixed;
     width: 376px;
-    left: 3%;
+    left: 23%;
     background-image: url("img/tree.png");
     background-size: contain;
     height: 600px;
@@ -72,24 +72,14 @@
 
 /* Анимация качания игрушек */
 @keyframes toyShakes {
-    0%{
-        transform: rotate(0deg);
-    }
 
     25%{
-        transform: rotate(45deg);
+        transform: rotate(25deg);
     }
 
-    50%{
-        transform: rotate(0deg);
-    }
 
     75%{
-        transform: rotate(-45deg);
-    }
-
-    100%{
-        transform: rotate(0deg);
+        transform: rotate(-25deg);
     }
 
 }
