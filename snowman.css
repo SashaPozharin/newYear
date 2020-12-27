@@ -174,10 +174,10 @@
     position: relative;
     left:5px;
 }
-.snowmanmobile{
-    position: relative;
-    left:17px;
-    bottom: 10%;
+.snowmanMobile{
+    position: absolute;
+    left:77px;
+    bottom: 71%;
     transform: scale(0.5);
 }
 /*===================================*/
