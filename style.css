@@ -7,7 +7,7 @@ body{
 
     z-index: 1;
 
-    animation: snow 15s linear infinite;
+    animation: snow 300s linear infinite;
 
 
 }
@@ -21,7 +21,7 @@ body{
 
 
     100%{
-        background-position: 500px 750px, 150px 1500px, -175px 150px ;
+        background-position: 10000px 15000px, 3000px 30000px, -3500px 3000px ;
     }
 }
 
@@ -61,7 +61,7 @@ body{
 /* для мобилы*/
 #countdownMobile{
     position: absolute;
-    left: 19%;
+    left: 25%;
     top: 43%;
     color: azure;
     font-family: 'Russo One', sans-serif;
@@ -79,7 +79,7 @@ body{
   
 #grazMobile{
     position: absolute;
-    left: 22%;
+    left: 27%;
     top: 35%;
     color: snow;
     font-family: 'Mountains of Christmas';

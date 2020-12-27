@@ -9,11 +9,11 @@
     height: 600px;
 }
 #treeMobile{
-    transform: scale(0.4);
-    top: 36%;
+    transform: scale(0.5);
+    top: 38%;
     position: fixed;
     width: 376px;
-    left: 23%;
+    left: 36%;
     background-image: url("img/tree.png");
     background-size: contain;
     height: 600px;
