@@ -25,61 +25,6 @@ body{
     }
 }
 
-#tree{
-    top: 44%;
-    position: fixed;
-    width: 376px;
-    background-image: url("img/tree.png");
-    background-size: contain;
-    height: 600px;
-}
-#toy1{
-    position: relative;
-    width:  61px;
-
-    left: 102px;
-    top: 250px;
-    transform-origin: top;
-    animation: toyShakes 3s 5s infinite;
-}
-#toy2{
-    position: relative;
-    width:  65px;
-    left: 125px;
-    top: 360px;
-    transform-origin: top;
-    animation: toyShakes 3s 10s infinite;
-}
-#toy3{
-    position: relative;
-    width:  54px;
-    left: 35px;
-    top: 120px;
-    transform-origin: top;
-    animation: toyShakes 3s 15s infinite;
-}
-@keyframes toyShakes {
-    0%{
-        transform: rotate(0deg);
-    }
-
-    25%{
-        transform: rotate(45deg);
-    }
-
-    50%{
-        transform: rotate(0deg);
-    }
-
-    75%{
-        transform: rotate(-45deg);
-    }
-
-    100%{
-        transform: rotate(0deg);
-    }
-
-}
 #countdown{
     position: absolute;
     left: 21%;
@@ -111,4 +56,35 @@ body{
 }
 #graz>h1{
     font-size: 138pt;
+}
+
+/* для мобилы*/
+#countdownMobile{
+    position: absolute;
+    left: 22%;
+    top: 43%;
+    color: azure;
+    font-family: 'Russo One', sans-serif;
+}
+#countdownMobile>span{
+    font-size:28pt ;
+    
+}
+
+@font-face {
+    font-family: 'Mountains of Christmas';
+    font-style: normal;
+    src: local("Mountains of Christmas"), local("MountainsofChristmas-Regular"), url(https://fonts.gstatic.com/s/mountainsofchristmas/v8/dVGBFPwd6G44IWDbQtPewylJhLDHyIrT3I5b5eGTHmw.woff2) format("woff2");
+  }
+  
+#grazMobile{
+    position: absolute;
+    left: 23%;
+    top: 35%;
+    color: snow;
+    font-family: 'Mountains of Christmas';
+      
+}
+#grazMobile>h1{
+    font-size: 28pt;
 }

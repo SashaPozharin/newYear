@@ -8,6 +8,16 @@
     background-size: contain;
     height: 600px;
 }
+#treeMobile{
+    transform: scale(0.5);
+    top: 53%;
+    position: fixed;
+    width: 376px;
+    left: 3%;
+    background-image: url("img/tree.png");
+    background-size: contain;
+    height: 600px;
+}
 /* Параметры Звезды */
 #treeStar{
     position: relative;
@@ -18,6 +28,7 @@
     background-image: url(./img/tree_star.png);
     background-size: contain;
 }
+
 #treeStar>div{
     position: relative;
     left: calc(50% - 5px);
