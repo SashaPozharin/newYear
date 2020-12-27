@@ -1,0 +1,101 @@
+/* Ёлка */
+/* Параметры_Ёлки */
+#tree{
+    top: 44%;
+    position: fixed;
+    width: 376px;
+    background-image: url("img/tree.png");
+    background-size: contain;
+    height: 600px;
+}
+/* Параметры Звезды */
+#treeStar{
+    position: relative;
+    left: calc(50% - 24px);
+    top: 8px;
+    width: 46px;
+    height: 45px;
+    background-image: url(./img/tree_star.png);
+    background-size: contain;
+}
+#treeStar>div{
+    position: relative;
+    left: calc(50% - 5px);
+    top: calc(50% - 5px);
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: transparent;
+    z-index: -1;
+    /* box-shadow: 
+        0 0 20px 10px #ffffff,
+        0 0 50px 30px rgb(255, 217, 0); */
+}
+
+/* Параметры Игрушек */
+#toy1{
+    position: relative;
+    width:  61px;
+
+    left: 102px;
+    top: 250px;
+    transform-origin: top;
+    animation: toyShakes 3s 5s infinite;
+}
+#toy2{
+    position: relative;
+    width:  65px;
+    left: 125px;
+    top: 360px;
+    transform-origin: top;
+    animation: toyShakes 3s 10s infinite;
+}
+#toy3{
+    position: relative;
+    width:  54px;
+    left: 35px;
+    top: 120px;
+    transform-origin: top;
+    animation: toyShakes 3s 15s infinite;
+}
+
+/* Анимация качания игрушек */
+@keyframes toyShakes {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    25%{
+        transform: rotate(45deg);
+    }
+
+    50%{
+        transform: rotate(0deg);
+    }
+
+    75%{
+        transform: rotate(-45deg);
+    }
+
+    100%{
+        transform: rotate(0deg);
+    }
+
+}
+
+/* Анимация свечения звезды */
+.glowing>div{
+    animation: starGlow 2s infinite;
+}
+@keyframes starGlow{
+    to, from{
+        box-shadow: 
+            0 0 20px 10px #ffffff,
+            0 0 50px 30px rgb(255, 217, 0);
+    }
+    50%{
+        box-shadow: 
+            0 0 20px 10px #ffffff,
+            0 0 50px 20px rgb(255, 217, 0);
+    }
+}

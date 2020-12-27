@@ -1,30 +1,11 @@
-let music;
-// Сайт загрузился
+let music = new Howl({
+    src: ["audio/1.mp3", "audio/2.mp3", "audio/3.mp3"],
+    loop: true,
+    volume: 0.5
+});
+let currentSong = null;
+
 $(document).ready(function () {
-    // Настраиваем музыку
-    music = new Howl({
-        src: ["audio/muzon1.mp3", "audio/muzon2.mp3", "audio/muzon3.mp3"],
-        loop: true,
-        volume: 0.5
-    });
-});
-// Если нажали на ноту, играет музыка
-$("#tree>img").click(function(e){ 
-    music.stop();
-    let name = e.target.id;
-    if(name == "toy1"){
-        music.play(1);
-    }
-    else if(name == "toy2"){
-        music.play(2);
-    }
-    else if(name == "toy3"){
-        music.play(3);
-    }
-});
-
-
-// Интервал
 let timer = setInterval(function(){
     // Время нового года
     let newYear = new Date("1 January 2021 00:00:00");
@@ -54,5 +35,22 @@ let timer = setInterval(function(){
     $("#days").text(days + " :");
 
 
-},1000)
+    },1000)
+}); 
+// Если нажали на ноту, играет музыка
+$("#tree>img").click(function(e){ 
+    music.stop();
+    let name = e.target.id;
+    if(name == "toy1"){
+        music.play(1);
+    }
+    else if(name == "toy2"){
+        music.play(2);
+    }
+    else if(name == "toy3"){
+        music.play(3);
+    }
+});
+
+
     
