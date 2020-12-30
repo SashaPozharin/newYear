@@ -1,36 +1,34 @@
 
 $(document).ready(function () {
-    let timer = setInterval(function(){
+    setInterval(function(){
         // Время нового года
         let newYear = new Date("1 January 2021 00:00:00");
         // Нынешнее время
         let now = new Date();
-        //Разность дат
+        // Разность дат
         let diff = newYear - now;
-        console.log(diff)
-
-        let seconds = Math.floor(diff/1000);
-        let minutes = Math.floor(seconds/60);
-        let hours = Math.floor(minutes/60);
-        let days = Math.floor(hours/24);
-        hourstrue = hours % 24;
-        if (hourstrue <10)
-            hourstrue='0'+hourstrue
-        minutestrue = minutes % 60;
-        if (minutestrue <10)
-            minutestrue='0'+minutestrue
-        secondstrue = seconds % 60;
-        if (secondstrue <10)
-            secondstrue='0'+secondstrue
-        console.log(days, hours, minutes, seconds)
-        $(".seconds").text(secondstrue);
-        $(".minutes").text(minutestrue + " :");
-        $(".hours").text(hourstrue + " :");
-        $(".days").text(days + " :");
-
-
-    },1000)
-}); 
+    
+        // Проверяем что таймер не истёк
+        if(diff > 0){
+            let days = Math.floor( diff/(24*60*60*1000) );
+            let hours = Math.floor( (diff%(24*60*60*1000)) / (60*60*1000) );
+            let minutes = Math.floor( (diff%(60*60*1000)) / (60*1000));
+            let seconds = Math.floor( (diff%(60*1000)) / 1000);
+    
+            $(".seconds").text(seconds);
+            $(".minutes").text(minutes + " :");
+            $(".hours").text(hours + " :");
+            $(".days").text(days + " :");
+        }
+        else{
+            $("#countdown p, #countdownMobile p").text("Новый Год Наступил!")
+            $("#countdown, #countdownMobile").fadeOut(2000, function(){
+                $(this).remove();
+                $(".envlope-wrapper").fadeIn(1000).removeClass("d-none")
+                $(".envlope-wrapperMobile").fadeIn(1000).removeClass("d-none")
+            });
+        }
+    }, 1000)
 // Если нажали на ноту, играет музыка
 // Список музыки
 let music1 = new Howl({
@@ -124,5 +122,14 @@ setInterval(function () {
     }, 1500)
 }, 3500);
 
+})
+// Открываем и закрываем открытку
+$(".envlope-wrapper").click(function (e) { 
+    $("#envelope").toggleClass("open");
+    $("#envelope").toggleClass("close");
+});
+$(".envlope-wrapperMobile").click(function (e) { 
+    $("#envelopeMobile").toggleClass("open");
+    $("#envelopeMobile").toggleClass("close");
     
-    
+});
